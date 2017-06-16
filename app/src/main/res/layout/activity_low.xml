@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal"
+    android:weightSum="1"
+
+
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="8dp">
+
+
+    <Space
+        android:layout_width="16dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="311dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.65">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:id="@+id/levelLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="NIVEL: BAJO"
+            android:textStyle="italic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="72dp" />
+
+        <TextView
+            android:id="@+id/TitleLow"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:text="TRANQUILO"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/DescripLow"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:text="Las verdades y retos de ésta categoría son los de menor nivel. No te vas a encontrar cosas muy comprometidas, ¡pero eso no significa que no debas aceptar lo que te toque!"
+            android:textAlignment="viewStart"
+            android:textSize="24sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/VerdadLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="VERDAD" />
+
+            <Button
+                android:id="@+id/RetoLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="RETO" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/identificadorLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¡Vamos!" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

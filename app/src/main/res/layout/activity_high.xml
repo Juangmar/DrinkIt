@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    tools:context="koldur.losversados.HighActivity"
+
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="8dp">
+
+
+    <Space
+        android:layout_width="16dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="311dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.65">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="NIVEL: A POR TODAS"
+            android:textStyle="italic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="72dp" />
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:text="¡MUCHO OJO!"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Descrip"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:text="Los retos de éste nivel son del mayor nivel de atrevimiento. Seguramente se lleven mejor con alcohol en el cuerpo, así que bebed, relajaos y... ¡disfrutad!"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Verdad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="VERDAD" />
+
+            <Button
+                android:id="@+id/Reto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="RETO" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/identificador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¡Vamos!" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

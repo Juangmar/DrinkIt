@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundApp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="EL CLUB DE LOS VERSADOS"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:visibility="visible"
+            tools:text="DRINK IT!" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="345dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="326dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/buttonLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.13"
+                    android:background="@color/colorAccent"
+                    android:text="Verdad o Reto: Light" />
+
+
+                <Button
+                    android:id="@+id/buttonMed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.16"
+                    android:background="@color/colorPrimary"
+                    android:text="Verdad o Reto: Medio" />
+
+                <Button
+                    android:id="@+id/buttonHigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.18"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Verdad o Reto: Extremo" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="73dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonYoNunca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.88"
+                        android:background="@color/colorAccent"
+                        android:text="Yo Nunca" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="64dp"
+                        android:layout_weight="0.23" />
+
+                    <Button
+                        android:id="@+id/todosLosVR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.72"
+                        android:background="@color/colorAccent"
+                        android:text="Todos los V/R" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="versión: 0.2    "
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+</LinearLayout>
