@@ -157,7 +157,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
         android:gravity="end"
-        android:text='versión: 0.3 - "Constraint"   '
+        android:text='versión: 0.4 - "Content"   '
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
