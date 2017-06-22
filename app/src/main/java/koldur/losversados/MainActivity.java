@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Button allButton;
         Button yoNuncaButton;
         Button dedoAcusadorButton;
+        Button config;
 
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -85,5 +86,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(siguiente11);
             }
         });
+
+        config = (Button) findViewById(R.id.conf);
+        config.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent siguiente11 = new Intent(MainActivity.this, Configuration.class);
+                startActivity(siguiente11);
+            }
+        });
+
     }
 }

@@ -31,6 +31,7 @@
         <activity android:name=".AllVRActivity"></activity>
         <activity android:name=".ynActivity"></activity>
         <activity android:name=".daActivity"></activity>
+        <activity android:name=".Configuration"></activity>
 
     </application>
 
