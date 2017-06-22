@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent siguiente11 = new Intent(MainActivity.this, Configuration.class);
+                Intent siguiente11 = new Intent(MainActivity.this, ConfigurationActivity.class);
                 startActivity(siguiente11);
             }
         });
