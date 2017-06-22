@@ -30,7 +30,7 @@
         <activity android:name=".MedActivity"></activity>
         <activity android:name=".AllVRActivity"></activity>
         <activity android:name=".ynActivity"></activity>
-        <activity android:name=".daActivity"></activity>
+        <activity android:name=".DaActivity"></activity>
         <activity android:name=".ConfigurationActivity"></activity>
 
     </application>

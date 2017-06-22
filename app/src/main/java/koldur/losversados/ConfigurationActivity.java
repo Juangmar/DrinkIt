@@ -1,5 +1,8 @@
 package koldur.losversados;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +13,7 @@ import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by Juan on 22/6/17.
@@ -49,8 +53,16 @@ public class ConfigurationActivity extends AppCompatActivity {
                     conf.put("rlow",rLow.isChecked());
                     conf.put("vlow",vLow.isChecked());
                     updateConfig(conf);
+
+                    Context context = getApplicationContext();
+                    Toast toast = Toast.makeText(context, "Se ha guardado correctamente", Toast.LENGTH_SHORT);
+                    toast.show();
+                    finish();
                 }
                 else{
+                    Context context = getApplicationContext();
+                    Toast toast = Toast.makeText(context, "Debe al menos haber una casilla marcada", Toast.LENGTH_SHORT);
+                    toast.show();
 
                 }
              }
@@ -58,52 +70,25 @@ public class ConfigurationActivity extends AppCompatActivity {
 
      }
      private void updateConfig(HashMap<String, Boolean> conf){
-         OutputStreamWriter outputStreamWriter;
-             try {
-
-                 outputStreamWriter = new OutputStreamWriter(this.openFileOutput("config.txt", this.MODE_PRIVATE));
-                 outputStreamWriter.write("rhigh="+conf.get("rhigh"));
-                 outputStreamWriter.write("rhigh="+conf.get("rhigh"));
-                 outputStreamWriter.write("rhigh="+conf.get("rhigh"));
-                 outputStreamWriter.close();
-             }
-             catch (IOException e) {
-                //No se ha podido abrir el archivo
-             }
+         SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.DA_COnfiguration_file), Context.MODE_PRIVATE);
+         SharedPreferences.Editor editor = sharedPref.edit();
+         editor.putBoolean("rhigh",conf.get("rhigh"));
+         editor.putBoolean("vhigh",conf.get("vhigh"));
+         editor.putBoolean("rmed",conf.get("rmed"));
+         editor.putBoolean("vmed",conf.get("vmed"));
+         editor.putBoolean("rlow",conf.get("rlow"));
+         editor.putBoolean("vlow",conf.get("vlow"));
+         editor.commit();
      }
 
 
      private void procesarConfig(HashMap<String, Boolean> conf){
-         InputStream inputStream = null;
-         String text;
-         String[] lines;
-         try{
-             inputStream = this.getResources().openRawResource(R.raw.config);
-             text = btoString(inputStream);
-             lines = text.split("\n");
-             for (int i = 0; i < lines.length; i++){
-                 String linea[] = lines[i].split("=");
-                 conf.put(linea[0],Boolean.parseBoolean(linea[1]));
-             }
-         }catch (IOException e){
-             // FALTA POR DECLARAR QUÉ PASA SI NO SE PUEDE LEER
-         } finally{
-             try{
-                 inputStream.close();
-             }catch(IOException e){
-                 // FALTA POR DECLARAR QUÉ PASA SI NO SE PUEDE LEER
-             }
-         }
+         SharedPreferences sh = getSharedPreferences(getString(R.string.DA_COnfiguration_file), Context.MODE_PRIVATE);
+         conf.put("rhigh",sh.getBoolean("rhigh",false));
+         conf.put("vhigh",sh.getBoolean("vhigh",false));
+         conf.put("rmed",sh.getBoolean("rmed",false));
+         conf.put("vmed",sh.getBoolean("vmed",false));
+         conf.put("rlow",sh.getBoolean("rlow",false));
+         conf.put("vlow",sh.getBoolean("vlow",false));
      }
-    public String btoString( InputStream inputStream ) throws IOException
-    {
-        ByteArrayOutputStream b = new ByteArrayOutputStream();
-        byte[] bytes = new byte[4096];
-        int len = 0;
-        while ( (len=inputStream.read(bytes))>0 )
-        {
-            b.write(bytes,0,len);
-        }
-        return new String( b.toByteArray(),"UTF8");
-    }
 }

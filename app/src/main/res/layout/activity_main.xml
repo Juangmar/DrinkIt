@@ -173,7 +173,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
         android:gravity="end"
-        android:text='versión: 0.5.1 - "Custom"   '
+        android:text='versión: 0.5.2 - "Custom"   '
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

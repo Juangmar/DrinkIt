@@ -1,5 +1,7 @@
 package koldur.losversados;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,10 +18,10 @@ import java.util.Random;
  * Created by Juan on 13/06/2017.
  */
 
-public class daActivity extends AppCompatActivity {
+public class DaActivity extends AppCompatActivity {
 
     private HashMap<Integer,String> listaPreg = new HashMap<Integer,String>();
-    private HashMap<Integer,String> listaRet = new HashMap<Integer,String>();
+    private HashMap<Integer,String> listaCastigos = new HashMap<Integer,String>();
 
     Button siguiente;
     TextView descr, id, titulo;
@@ -28,7 +30,7 @@ public class daActivity extends AppCompatActivity {
 
 
         leerArchivoDAPreg(listaPreg);
-        leerArchivoDARet(listaRet);
+        leerArchivoDARet(listaCastigos);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_da);
 
@@ -46,8 +48,8 @@ public class daActivity extends AppCompatActivity {
                 id.setText(Integer.toString(randomNumber1));
 
                 Random random2 = new Random();
-                int randomNumber2 = random2.nextInt(listaRet.size());
-                descr.setText(listaRet.get(randomNumber2));
+                int randomNumber2 = random2.nextInt(listaCastigos.size());
+                descr.setText(listaCastigos.get(randomNumber2));
 
                 titulo.refreshDrawableState();
                 descr.refreshDrawableState();
@@ -90,31 +92,68 @@ public class daActivity extends AppCompatActivity {
         InputStream inputStream = null;
         String text;
         String[] lines;
+        SharedPreferences sh = getSharedPreferences(getString(R.string.DA_COnfiguration_file), Context.MODE_PRIVATE);
         try{
             int lastId = 0;
-            inputStream = this.getResources().openRawResource(R.raw.rethighfile);
-            text = btoString(inputStream);
-            lines = text.split("\n");
+            if(sh.getBoolean("rhigh",false)) {
+                inputStream = this.getResources().openRawResource(R.raw.rethighfile);
+                text = btoString(inputStream);
+                lines = text.split("\n");
 
-            for (int i = 0; i < lines.length; i++){
-                String linea[] = lines[i].split(";");
-                lista.put(i,linea[2]);
+                for (int i = 0; i < lines.length; i++) {
+                    String linea[] = lines[i].split(";");
+                    lista.put(i, linea[2]);
+                }
+                lastId += lines.length;
             }
-            lastId = lines.length;
-            inputStream = this.getResources().openRawResource(R.raw.retmedfile);
-            text = btoString(inputStream);
-            lines = text.split("\n");
-            for (int i = 0; i < lines.length; i++){
-                String linea[] = lines[i].split(";");
-                lista.put(i+lastId,linea[2]);
+            if(sh.getBoolean("rmed",false)) {
+                inputStream = this.getResources().openRawResource(R.raw.retmedfile);
+                text = btoString(inputStream);
+                lines = text.split("\n");
+                for (int i = 0; i < lines.length; i++) {
+                    String linea[] = lines[i].split(";");
+                    lista.put(i + lastId, linea[2]);
+                }
+                lastId += lines.length;
             }
-            lastId = lines.length;
-            inputStream = this.getResources().openRawResource(R.raw.retlowfile);
-            text = btoString(inputStream);
-            lines = text.split("\n");
-            for (int i = 0; i < lines.length; i++){
-                String linea[] = lines[i].split(";");
-                lista.put(i+lastId,linea[2]);
+            if(sh.getBoolean("rlow",false)) {
+                inputStream = this.getResources().openRawResource(R.raw.retlowfile);
+                text = btoString(inputStream);
+                lines = text.split("\n");
+                for (int i = 0; i < lines.length; i++) {
+                    String linea[] = lines[i].split(";");
+                    lista.put(i + lastId, linea[2]);
+                }
+                lastId += lines.length;
+            }
+            if(sh.getBoolean("vhigh",false)){
+                inputStream = this.getResources().openRawResource(R.raw.verdhighfile);
+                text = btoString(inputStream);
+                lines = text.split("\n");
+                for (int i = 0; i < lines.length; i++) {
+                    String linea[] = lines[i].split(";");
+                    lista.put(i + lastId, linea[2]);
+                }
+                lastId += lines.length;
+            }
+            if(sh.getBoolean("vmed",false)){
+                inputStream = this.getResources().openRawResource(R.raw.verdmedfile);
+                text = btoString(inputStream);
+                lines = text.split("\n");
+                for (int i = 0; i < lines.length; i++) {
+                    String linea[] = lines[i].split(";");
+                    lista.put(i + lastId, linea[2]);
+                }
+                lastId += lines.length;
+            }
+            if(sh.getBoolean("vlow",true)){
+                inputStream = this.getResources().openRawResource(R.raw.verdlowfile);
+                text = btoString(inputStream);
+                lines = text.split("\n");
+                for (int i = 0; i < lines.length; i++) {
+                    String linea[] = lines[i].split(";");
+                    lista.put(i + lastId, linea[2]);
+                }
             }
 
         }catch (IOException e){
