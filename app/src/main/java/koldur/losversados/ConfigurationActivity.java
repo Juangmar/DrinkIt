@@ -1,16 +1,12 @@
 package koldur.losversados;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStreamWriter;
+
 import java.util.HashMap;
 import android.widget.Button;
 import android.widget.Toast;

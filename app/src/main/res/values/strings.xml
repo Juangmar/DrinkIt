@@ -9,4 +9,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="DA_COnfiguration_file">daconfif</string>
+    <string name="DBInfo">dbinfo</string>
 </resources>
