@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
     android:weightSum="1"
     tools:context="koldur.losversados.HighActivity"
 
@@ -13,80 +14,83 @@
     tools:layout_editor_absoluteY="8dp">
 
 
-    <Space
-        android:layout_width="16dp"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="right"
+        android:text="NIVEL: DE TODO"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="311dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="0.65">
+    <TextView
+        android:id="@+id/TitleALL"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="¡CUIDADO!"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="60dp" />
+    <TextView
+        android:id="@+id/DescripALL"
+        android:layout_width="match_parent"
+        android:layout_height="248dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Aunque puedes encontrarte verdades y retos inofensivos, también encontrarás aquellos de mayor nivel. ¡Tú mismo!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitleALL" />
 
-        <TextView
-            android:id="@+id/level"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="NIVEL: DE TODO"
-            android:textStyle="italic" />
+    <Button
+        android:id="@+id/VerdadALL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="0.5"
+        android:text="VERDAD"
+        app:layout_constraintEnd_toStartOf="@+id/RetoALL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescripALL" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="72dp" />
+    <Button
+        android:id="@+id/RetoALL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="0.5"
+        android:text="RETO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/VerdadALL"
+        app:layout_constraintTop_toBottomOf="@+id/DescripALL" />
 
-        <TextView
-            android:id="@+id/TitleALL"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:text="¡CUIDADO!"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/DescripALL"
-            android:layout_width="match_parent"
-            android:layout_height="248dp"
-            android:text="Aunque puedes encontrarte verdades y retos inofensivos, también encontrarás aquellos de mayor nivel. ¡Tú mismo!"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="24sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/VerdadALL"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="VERDAD" />
-
-            <Button
-                android:id="@+id/RetoALL"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="RETO" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/identificadorALL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¡Vamos!" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/identificadorALL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="¡Vamos!"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
 
