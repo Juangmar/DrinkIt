@@ -6,7 +6,7 @@
     android:orientation="horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimaryDark_RED"
     android:weightSum="1"
     tools:context="koldur.losversados.HighActivity"
 

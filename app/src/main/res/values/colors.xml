@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ee3b3b</color>
-    <color name="colorPrimaryDark">#8b2323</color>
-    <color name="colorAccent">#dc5b5e</color>
+    <color name="colorPrimary_RED">#ee3b3b</color>
+    <color name="colorPrimaryDark_RED">#8b2323</color>
+    <color name="colorAccent_RED">#dc5b5e</color>
     <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
     <color name="backgroundApp">#1d1d1d</color>
     <color name="statColor">#00054d</color>
+
+    <color name="colorPrimary_BLUE">#3b47ee</color>
+    <color name="colorPrimaryDark_BLUE">#23288b</color>
+    <color name="colorAccent_BLUE">#5b95dc</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

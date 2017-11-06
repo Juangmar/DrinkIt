@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimaryDark_RED"
     android:orientation="horizontal"
     android:weightSum="1"
     tools:context="koldur.losversados.HighActivity"
@@ -31,7 +31,7 @@
     <TextView
         android:id="@+id/titleDA"
         android:layout_width="match_parent"
-        android:layout_height="62dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
