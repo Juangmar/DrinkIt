@@ -9,4 +9,56 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="DA_COnfiguration_file">daconfif</string>
+
+
+    <string name="modeAll">NIVEL: DE TODO</string>
+    <string name="titleAll">¡CUIDADO!</string>
+    <string name="descrAll">Aunque puedes encontrarte verdades y retos inofensivos, también
+        encontrarás aquellos de mayor nivel. ¡Tú mism@!</string>
+
+    <string name="modeDA">JUEGO: EL DEDO ACUSADOR</string>
+    <string name="titleDA">EL DEDO ACUSADOR</string>
+    <string name="descrDA">Vamos a jugar a un juego&#8230; Cada jugador debe tener papeles con el
+        nombre del resto de jugadores. Aparecerá una pregunta del tipo: ¿Quién creéis que es
+        más&#8230;? A la vez, enseñáis los nombres de los jugadores que creáis que encajan en la
+        descripción. El jugador más votado cumple un reto!</string>
+
+    <string name="modeHigh">NIVEL: A POR TODAS</string>
+    <string name="titleHigh">¡MUCHO OJO!</string>
+    <string name="descrHigh">Los retos de éste nivel son del mayor nivel de atrevimiento.
+        Seguramente se lleven mejor con alcohol en el cuerpo, así que bebed, relajaos y&#8230;
+        ¡Disfrutad!</string>
+
+    <string name="modeLow">NIVEL: BAJO</string>
+    <string name="titleLow">TRANQUILO</string>
+    <string name="descrLow">Las verdades y retos de ésta categoría son los de menor nivel. No te vas
+        a encontrar cosas muy comprometidas, ¡pero eso no significa que no debas aceptar lo que te
+        toque!</string>
+
+    <string name="modeMed">NIVEL: MEDIO</string>
+    <string name="titleMed">NOMBRE DE V/R</string>
+    <string name="descrMed">Los retos y verdades que os vais a encotnrar a continuación son
+        relativamente atrevidos. No os vais a matar, pero os encontraréis algún que otro
+        reto.</string>
+
+    <string name="modeYN">JUEGO: YO NUNCA&#8230;</string>
+    <string name="titleYN">YO NUNCA&#8230;</string>
+    <string name="descrYN">El juego de juegos&#8230; ¡Yo nunca! Aunque supongo que ya sabéis cómo
+        funciona, os lo recuerdo. A continuación aparecerán situaciones aleatorias. ¡Quien las haya
+        vivido tiene que beber!</string>
+
+    <string name="verdadMayus">VERDAD</string>
+    <string name="retoMayus">RETO</string>
+    <string name="vamos">¡Vamos!</string>
+    <string name="save">GUARDAR</string>
+    <string name="nextMAYUS">Siguiente</string>
+
+    <string name="configuration">Configuración</string>
+    <string name="configDescriptionDA">Castigos de El Dedo Acusador:</string>
+    <string name="optRetHigh">Reto Nivel Alto</string>
+    <string name="optRetMed">Reto Nivel Medio</string>
+    <string name="optRetLow">Reto Nivel Bajo</string>
+    <string name="optVerdHigh">Verdad Nivel Alto</string>
+    <string name="optVerdMed">Verdad Nivel Medio</string>
+    <string name="optVerdLow">Verdad Nivel Bajo</string>
 </resources>

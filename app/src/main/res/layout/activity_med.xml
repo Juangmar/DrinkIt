@@ -21,8 +21,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:gravity="right"
-        android:text="NIVEL: MEDIO"
+        android:gravity="end"
+        android:text="@string/modeMed"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="NOMBRE DE V/R"
+        android:text="@string/titleMed"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -51,8 +51,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Los retos y verdades que os vais a encotnrar a continuación son relativamente atrevidos. No os vais a matar, pero os encontraréis algún que otro reto."
-        android:textAlignment="viewStart"
+        android:text="@string/descrMed"
+        android:textAlignment="center"
+        android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +66,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:text="¡Vamos!"
+        android:text="@string/vamos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,18 +84,20 @@
         app:layout_constraintTop_toBottomOf="@+id/DescripMed">
 
         <Button
+            style="?android:attr/button"
             android:id="@+id/VerdadMed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="VERDAD" />
+            android:text="@string/verdadMayus" />
 
         <Button
+            style="?android:attr/button"
             android:id="@+id/RetoMed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="RETO" />
+            android:text="@string/retoMayus" />
 
     </LinearLayout>
 

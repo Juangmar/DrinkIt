@@ -8,7 +8,7 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="horizontal"
     android:weightSum="1"
-
+    tools:context="koldur.losversados.LowActivity"
 
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
@@ -21,8 +21,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:gravity="right"
-        android:text="NIVEL: BAJO"
+        android:gravity="end"
+        android:text="@string/modeLow"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="TRANQUILO"
+        android:text="@string/titleLow"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -52,7 +52,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Las verdades y retos de ésta categoría son los de menor nivel. No te vas a encontrar cosas muy comprometidas, ¡pero eso no significa que no debas aceptar lo que te toque!"
+        android:text="@string/descrLow"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +66,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:text="¡Vamos!"
+        android:text="@string/vamos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,21 +83,24 @@
         app:layout_constraintBottom_toTopOf="@+id/identificadorLow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DescripLow">
+        app:layout_constraintTop_toBottomOf="@+id/DescripLow"
+        >
 
         <Button
+            style="?android:attr/button"
             android:id="@+id/VerdadLow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="VERDAD" />
+            android:text="@string/verdadMayus" />
 
         <Button
+            style="?android:attr/button"
             android:id="@+id/RetoLow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="RETO" />
+            android:text="@string/retoMayus" />
 
     </LinearLayout>
 
