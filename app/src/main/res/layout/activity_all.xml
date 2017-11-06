@@ -47,7 +47,7 @@
     <TextView
         android:id="@+id/DescripALL"
         android:layout_width="match_parent"
-        android:layout_height="248dp"
+        android:layout_height="270dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"

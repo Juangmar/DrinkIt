@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,77 +14,82 @@
     tools:layout_editor_absoluteY="8dp">
 
 
-    <Space
-        android:layout_width="16dp"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:text="JUEGO: EL DEDO ACUSADOR"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="311dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="0.65"
-        android:weightSum="1">
+    <TextView
+        android:id="@+id/titleDA"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="0.92"
+        android:gravity="center"
+        android:text="EL DEDO ACUSADOR"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="60dp" />
+    <TextView
+        android:id="@+id/DescripDA"
+        android:layout_width="0dp"
+        android:layout_height="335dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Vamos a jugar a un juego... Cada jugador debe tener papeles con el nombre del resto de jugadores. Aparecerá una pregunta del tipo: ¿Quién creéis que es más ...? A la vez, enseñáis los nombres de los jugadores que creáis que encajan en la descripción. El jugador más votado cumple un reto!"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/siguienteDA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleDA"
+        app:layout_constraintVertical_bias="0.592" />
 
-        <TextView
-            android:id="@+id/level"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="JUEGO: EL DEDO ACUSADOR"
-            android:textStyle="italic" />
+    <Button
+        android:id="@+id/siguienteDA"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="0.5"
+        android:text="SIGUIENTE"
+        app:layout_constraintBottom_toTopOf="@+id/identificadorDA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
-
-        <TextView
-            android:id="@+id/titleDA"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:text="EL DEDO ACUSADOR"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_weight="0.92" />
-
-        <TextView
-            android:id="@+id/DescripDA"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:gravity="center"
-            android:text="Vamos a jugar a un juego... Cada jugador debe tener papeles con el nombre del resto de jugadores. Aparecerá una pregunta del tipo: ¿Quién creéis que es más ...? A la vez, enseñáis los nombres de los jugadores que creáis que encajan en la descripción. El jugador más votado cumple un reto!"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal">
-
-
-
-            <Button
-                android:id="@+id/siguienteDA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="SIGUIENTE" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/identificadorDA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¡Vamos!" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/identificadorDA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:text="¡Vamos!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,75 +14,78 @@
     tools:layout_editor_absoluteY="8dp">
 
 
-    <Space
-        android:layout_width="8dp"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:text="JUEGO: YO NUNCA..."
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="311dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="0.65">
+    <TextView
+        android:id="@+id/titleYoNunca"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="YO NUNCA..."
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="60dp" />
+    <TextView
+        android:id="@+id/DescripYN"
+        android:layout_width="0dp"
+        android:layout_height="335dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="El juego de juegos... ¡Yo nunca! Aunque supongo que ya sabéis cómo funciona, os lo recuerdo. A continuación aparecerán situaciones aleatorias. ¡Quien las haya vivido tiene que beber!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleYoNunca" />
 
-        <TextView
-            android:id="@+id/level"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="JUEGO: YO NUNCA..."
-            android:textStyle="italic" />
+    <Button
+        android:id="@+id/siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.5"
+        android:text="SIGUIENTE"
+        app:layout_constraintBottom_toTopOf="@+id/identificadorYN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescripYN" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="72dp" />
-
-        <TextView
-            android:id="@+id/titleYoNunca"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:text="YO NUNCA..."
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/DescripYN"
-            android:layout_width="match_parent"
-            android:layout_height="248dp"
-            android:text="El juego de juegos... ¡Yo nunca! Aunque supongo que ya sabéis cómo funciona, os lo recuerdo. A continuación aparecerán situaciones aleatorias. ¡Quien las haya vivido tiene que beber!"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="24sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal">
-
-
-
-            <Button
-                android:id="@+id/siguiente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="SIGUIENTE" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/identificadorYN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¡Vamos!" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/identificadorYN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="¡Vamos!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
 

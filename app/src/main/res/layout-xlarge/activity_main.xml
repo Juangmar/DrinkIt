@@ -1,121 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundApp"
     android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:weightSum="1">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="134dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:gravity="center"
-            android:text="EL CLUB DE LOS VERSADOS"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            android:typeface="normal"
-            android:visibility="visible"
-            tools:text="DRINK IT!" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="345dp"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="326dp"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <Button
-                    android:id="@+id/buttonLight"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.13"
-                    android:background="@color/colorAccent"
-                    android:text="Verdad o Reto: Light" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="404dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="DRINK IT!"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="DRINK IT!" />
 
 
-                <Button
-                    android:id="@+id/buttonMed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.16"
-                    android:background="@color/colorPrimary"
-                    android:text="Verdad o Reto: Medio" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
 
-                <Button
-                    android:id="@+id/buttonHigh"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.18"
-                    android:background="@color/colorPrimaryDark"
-                    android:text="Verdad o Reto: Extremo" />
+        android:text="VERDAD O RETO"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.13" />
+    <Button
+        android:id="@+id/buttonLight"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="73dp"
-                    android:orientation="horizontal">
+        android:layout_marginLeft="32dp"
 
-                    <Button
-                        android:id="@+id/buttonYoNunca"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.88"
-                        android:background="@color/colorAccent"
-                        android:text="Yo Nunca" />
+        android:layout_marginTop="36dp"
+        android:layout_weight="0.13"
+        android:background="@color/colorAccent"
+        android:text="Light"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="64dp"
-                        android:layout_weight="0.23" />
 
-                    <Button
-                        android:id="@+id/todosLosVR"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.72"
-                        android:background="@color/colorAccent"
-                        android:text="Todos los V/R" />
+    <Button
+        android:id="@+id/buttonMed"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
 
-                </LinearLayout>
+        android:layout_marginLeft="8dp"
 
-            </LinearLayout>
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_weight="0.16"
+        android:background="@color/colorPrimary"
+        android:text="Medio"
+        app:layout_constraintLeft_toRightOf="@+id/buttonLight"
+        app:layout_constraintRight_toLeftOf="@+id/buttonHigh"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        </LinearLayout>
+    <Button
+        android:id="@+id/buttonHigh"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_weight="0.18"
+        android:background="@color/colorPrimaryDark"
+        android:text="Extremo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <TextView
-            android:id="@+id/version"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="versión: 0.2    "
-            android:textStyle="bold|italic" />
+    <Space
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:id="@+id/space" />
 
-    </LinearLayout>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/buttonYoNunca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="132dp"
+        android:layout_weight="0.88"
+        android:background="@color/colorPrimary"
+        android:text="Yo Nunca"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todosLosVR" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_weight="0.23"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/todosLosVR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="104dp"
+        android:layout_weight="0.72"
+        android:background="@color/colorAccent"
+        android:text="Verdado o Reto: Todos los niveles"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMed" />
+
+    <Button
+        android:id="@+id/elDedoAcusador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="132dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="EL DEDO ACUSADOR"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonYoNunca" />
+
+    <Button
+        android:id="@+id/conf"
+        android:layout_width="125dp"
+
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_weight="0.13"
+        android:background="@color/black"
+        android:text="Configuración"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elDedoAcusador" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="end"
+        android:text='versión: 0.6.1 - "Design"   '
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
