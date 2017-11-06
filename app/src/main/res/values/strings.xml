@@ -10,6 +10,16 @@
     <string name="title_notifications">Notifications</string>
     <string name="DA_COnfiguration_file">daconfif</string>
 
+    <string name="version">versión: 0.6.1 - "Design"</string>
+
+    <string name="homeTitle">DRINK IT!</string>
+    <string name="homeModeVoR">VERDAD O RETO</string>
+    <string name="homeModeLow">Light</string>
+    <string name="homeModeMed">Medio</string>
+    <string name="homeModeHigh">Extremo</string>
+    <string name="homeModeYN">Yo nunca</string>
+    <string name="homeModeAll">Verdado o Reto: Todos los niveles</string>
+    <string name="homeModeDA">El Dedo Acusador</string>
 
     <string name="modeAll">NIVEL: DE TODO</string>
     <string name="titleAll">¡CUIDADO!</string>
