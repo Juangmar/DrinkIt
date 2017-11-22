@@ -59,29 +59,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TitleALL" />
 
-    <Button
-        android:id="@+id/VerdadALL"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_weight="0.5"
-        android:text="@string/verdadMayus"
-        app:layout_constraintEnd_toStartOf="@+id/RetoALL"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DescripALL" />
-
-    <Button
-        android:id="@+id/RetoALL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_weight="0.5"
-        android:text="@string/retoMayus"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/VerdadALL"
-        app:layout_constraintTop_toBottomOf="@+id/DescripALL" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/VerdadALL"
+            style="?android:attr/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/verdadMayus" />
+
+        <Button
+            android:id="@+id/RetoALL"
+            style="?android:attr/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/retoMayus" />
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/identificadorALL"

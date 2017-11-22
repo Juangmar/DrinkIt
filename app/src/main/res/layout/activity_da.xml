@@ -17,10 +17,10 @@
     <TextView
         android:id="@+id/level"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="15dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:gravity="end"
         android:text="@string/modeDA"
         android:textStyle="italic"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_weight="0.92"
         android:gravity="center"
         android:text="@string/titleDA"
@@ -49,11 +49,10 @@
     <TextView
         android:id="@+id/DescripDA"
         android:layout_width="0dp"
-        android:layout_height="335dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/descrDA"
         android:textAlignment="center"
@@ -61,20 +60,18 @@
         app:layout_constraintBottom_toTopOf="@+id/siguienteDA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleDA"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/siguienteDA"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_weight="0.5"
         android:text="@string/nextMAYUS"
-        app:layout_constraintBottom_toTopOf="@+id/identificadorDA"
+        app:layout_constraintBottom_toBottomOf="@+id/identificadorDA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
