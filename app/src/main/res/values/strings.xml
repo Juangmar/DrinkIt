@@ -10,7 +10,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="DA_COnfiguration_file">daconfif</string>
 
-    <string name="version">versión: 0.7.1 - "GUI"</string>
+    <string name="version">versión: 0.7.2 - "Beta"</string>
 
     <string name="homeTitle">DRINK IT!</string>
     <string name="homeModeVoR">VERDAD O RETO</string>
@@ -18,7 +18,7 @@
     <string name="homeModeMed">Medio</string>
     <string name="homeModeHigh">Extremo</string>
     <string name="homeModeYN">Yo nunca</string>
-    <string name="homeModeAll">Verdado o Reto: Todos los niveles</string>
+    <string name="homeModeAll">Verdad o Reto: Todos los niveles</string>
     <string name="homeModeDA">El Dedo Acusador</string>
 
     <string name="modeAll">NIVEL: DE TODO</string>
@@ -31,7 +31,8 @@
     <string name="descrDA">Vamos a jugar a un juego&#8230; Cada jugador debe tener papeles con el
         nombre del resto de jugadores. Aparecerá una pregunta del tipo: ¿Quién creéis que es
         más&#8230;? A la vez, enseñáis los nombres de los jugadores que creáis que encajan en la
-        descripción. El jugador más votado cumple un reto!</string>
+        descripción. El jugador más votado cumple un reto! ATENCIÓN: Puedes fijar los retos a
+        cumplir en el Menú Principal > Configuración</string>
 
     <string name="modeHigh">NIVEL: A POR TODAS</string>
     <string name="titleHigh">¡MUCHO OJO!</string>

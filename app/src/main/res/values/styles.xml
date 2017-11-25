@@ -10,9 +10,9 @@
     </style>
 
     <style name="AppThemeBlue" parent="android:Theme.Material">
-        <item name="colorPrimary">@color/colorPrimary_BLUE</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark_BLUE</item>
-        <item name="colorAccent">@color/colorAccent_BLUE</item>
+        <item name="colorPrimary">@color/colorPrimary_RED</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_RED</item>
+        <item name="colorAccent">@color/colorAccent_RED</item>
         <item name="android:background">@color/white</item>
     </style>
     <style name="FullscreenTheme" parent="Theme.AppCompat.NoActionBar">
