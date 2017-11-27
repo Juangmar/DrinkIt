@@ -40,11 +40,14 @@ public class ConfigurationActivity extends AppCompatActivity {
          rLow.setChecked(conf.get("rlow"));
          final CheckBox vLow = (CheckBox) findViewById(R.id.VLow);
          vLow.setChecked(conf.get("vlow"));
+         final CheckBox vhe = (CheckBox) findViewById(R.id.VHE);
+         vhe.setChecked(conf.get("rhighexpl"));
+
          save = (Button) findViewById(R.id.UpdateConfig);
          save.setOnClickListener(new View.OnClickListener(){
              @Override
              public void onClick(View v) {
-                if(rHigh.isChecked()||vHigh.isChecked()||rMed.isChecked()||vMed.isChecked()||rLow.isChecked()||vLow.isChecked()){
+                if(rHigh.isChecked()||vHigh.isChecked()||rMed.isChecked()||vMed.isChecked()||rLow.isChecked()||vLow.isChecked()||vhe.isChecked()){
                     conf = new HashMap<String, Boolean>();
                     conf.put("rhigh",rHigh.isChecked());
                     conf.put("vhigh",vHigh.isChecked());
@@ -52,6 +55,7 @@ public class ConfigurationActivity extends AppCompatActivity {
                     conf.put("vmed",vMed.isChecked());
                     conf.put("rlow",rLow.isChecked());
                     conf.put("vlow",vLow.isChecked());
+                    conf.put("rhighexpl",vhe.isChecked());
                     updateConfig(conf);
 
                     Context context = getApplicationContext();
@@ -78,6 +82,7 @@ public class ConfigurationActivity extends AppCompatActivity {
          editor.putBoolean("vmed",conf.get("vmed"));
          editor.putBoolean("rlow",conf.get("rlow"));
          editor.putBoolean("vlow",conf.get("vlow"));
+         editor.putBoolean("rhighexpl",conf.get("rhighexpl"));
          editor.commit();
      }
 
@@ -90,5 +95,6 @@ public class ConfigurationActivity extends AppCompatActivity {
          conf.put("vmed",sh.getBoolean("vmed",false));
          conf.put("rlow",sh.getBoolean("rlow",false));
          conf.put("vlow",sh.getBoolean("vlow",false));
+         conf.put("rhighexpl",sh.getBoolean("rhighexpl",false));
      }
 }

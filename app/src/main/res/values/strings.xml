@@ -66,10 +66,12 @@
 
     <string name="configuration">Configuración</string>
     <string name="configDescriptionDA">Castigos de El Dedo Acusador:</string>
+    <string name="configDescriptionEXPL">Incluir material explítito en toda la aplcación:</string>
     <string name="optRetHigh">Reto Nivel Alto</string>
     <string name="optRetMed">Reto Nivel Medio</string>
     <string name="optRetLow">Reto Nivel Bajo</string>
     <string name="optVerdHigh">Verdad Nivel Alto</string>
     <string name="optVerdMed">Verdad Nivel Medio</string>
     <string name="optVerdLow">Verdad Nivel Bajo</string>
+    <string name="optRetHighExpl">Reto Nivel Alto EXPLÍCITOS</string>
 </resources>

@@ -1,6 +1,8 @@
 package koldur.losversados;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -68,13 +70,23 @@ public class HighActivity extends AppCompatActivity {
         InputStream inputStream = null;
         String text;
         String[] lines;
+        SharedPreferences sh = getSharedPreferences(getString(R.string.DA_COnfiguration_file), Context.MODE_PRIVATE);
+        Boolean ext = sh.getBoolean("rhighexpl",false);
         try{
             inputStream = this.getResources().openRawResource(R.raw.rethighfile);
             text = btoString(inputStream);
             lines = text.split("\n");
+            int counter = 0;
             for (int i = 0; i < lines.length; i++){
                 String linea[] = lines[i].split(";");
-                lista.put(i,linea[2]);
+                if (linea[1].equals("Reto")) {
+                    lista.put(counter, linea[2]);
+                    counter++;
+                }
+                else if(ext && (linea[1].equals("EXPL"))) {
+                    lista.put(counter, linea[2]);
+                    counter++;
+                }
             }
         }catch (IOException e){
             // FALTA POR DECLARAR QUÉ PASA SI NO SE PUEDE LEER
