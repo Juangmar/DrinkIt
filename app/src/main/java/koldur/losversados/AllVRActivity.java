@@ -1,6 +1,8 @@
 package koldur.losversados;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -68,17 +70,27 @@ public class AllVRActivity extends AppCompatActivity {
         InputStream inputStream = null;
         String text;
         String[] lines;
+        SharedPreferences sh = getSharedPreferences(getString(R.string.DA_COnfiguration_file), Context.MODE_PRIVATE);
+        Boolean ext = sh.getBoolean("rhighexpl",false);
         try{
             int lastId = 0;
             inputStream = this.getResources().openRawResource(R.raw.rethighfile);
             text = btoString(inputStream);
             lines = text.split("\n");
 
+            int counter = 0;
             for (int i = 0; i < lines.length; i++){
                 String linea[] = lines[i].split(";");
-                lista.put(i,linea[2]);
+                if (linea[1].equals("Reto")) {
+                    lista.put(counter, linea[2]);
+                    counter++;
+                }
+                else if(ext && (linea[1].equals("EXPL"))) {
+                    lista.put(counter, linea[2]);
+                    counter++;
+                }
             }
-            lastId = lines.length;
+            lastId = counter;
             inputStream = this.getResources().openRawResource(R.raw.retmedfile);
             text = btoString(inputStream);
             lines = text.split("\n");
@@ -86,7 +98,7 @@ public class AllVRActivity extends AppCompatActivity {
                 String linea[] = lines[i].split(";");
                 lista.put(i+lastId,linea[2]);
             }
-            lastId = lines.length;
+            lastId = lista.size();
             inputStream = this.getResources().openRawResource(R.raw.retlowfile);
             text = btoString(inputStream);
             lines = text.split("\n");

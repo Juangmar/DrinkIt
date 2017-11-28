@@ -47,7 +47,7 @@ public class ConfigurationActivity extends AppCompatActivity {
          save.setOnClickListener(new View.OnClickListener(){
              @Override
              public void onClick(View v) {
-                if(rHigh.isChecked()||vHigh.isChecked()||rMed.isChecked()||vMed.isChecked()||rLow.isChecked()||vLow.isChecked()||vhe.isChecked()){
+                if(rHigh.isChecked()||vHigh.isChecked()||rMed.isChecked()||vMed.isChecked()||rLow.isChecked()||vLow.isChecked()){
                     conf = new HashMap<String, Boolean>();
                     conf.put("rhigh",rHigh.isChecked());
                     conf.put("vhigh",vHigh.isChecked());
