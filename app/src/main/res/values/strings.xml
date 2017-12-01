@@ -10,7 +10,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="DA_COnfiguration_file">daconfif</string>
 
-    <string name="version">versión: 0.8.1 - "Last Beta"</string>
+    <string name="version">versión: 1.0.0</string>
 
     <string name="homeTitle">DRINK IT!</string>
     <string name="homeModeVoR">VERDAD O RETO</string>
@@ -34,7 +34,7 @@
         descripción. El jugador más votado cumple un reto! ATENCIÓN: Puedes fijar los retos a
         cumplir en el Menú Principal > Configuración</string>
 
-    <string name="modeHigh">NIVEL: A POR TODAS</string>
+    <string name="modeHigh">NIVEL: EXTREMO</string>
     <string name="titleHigh">¡MUCHO OJO!</string>
     <string name="descrHigh">Los retos de éste nivel son del mayor nivel de atrevimiento.
         Seguramente se lleven mejor con alcohol en el cuerpo, así que bebed, relajaos y&#8230;

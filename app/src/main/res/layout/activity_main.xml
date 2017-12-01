@@ -165,6 +165,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:visibility="invisible"
         android:id="@+id/version2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

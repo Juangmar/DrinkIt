@@ -60,6 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TitleLow" />
 
     <TextView
+        android:visibility="invisible"
         android:id="@+id/identificadorLow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
