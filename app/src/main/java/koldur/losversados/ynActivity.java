@@ -57,16 +57,4 @@ public class ynActivity extends AppCompatActivity {
         DAOContent dao = DAO_Factory.getInstance();
         lista = dao.getAllYoNunca(this.getResources());
     }
-
-    public String btoString( InputStream inputStream ) throws IOException
-    {
-        ByteArrayOutputStream b = new ByteArrayOutputStream();
-        byte[] bytes = new byte[4096];
-        int len = 0;
-        while ( (len=inputStream.read(bytes))>0 )
-        {
-            b.write(bytes,0,len);
-        }
-        return new String( b.toByteArray(),"UTF8");
-    }
 }
