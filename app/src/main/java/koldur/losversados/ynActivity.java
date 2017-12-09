@@ -12,6 +12,9 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Random;
 
+import koldur.losversados.dao.DAOContent;
+import koldur.losversados.dao.DAO_Factory;
+
 /**
  * Created by Juan on 07/04/2017.
  */
@@ -26,7 +29,8 @@ public class ynActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-        leerArchivoYN(lista);
+        leerArchivoYN();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yn);
 
@@ -48,33 +52,10 @@ public class ynActivity extends AppCompatActivity {
         });
     }
 
-    private void leerArchivoYN(HashMap lista){
+    private void leerArchivoYN(){
 
-        InputStream inputStream = null;
-        String text;
-        String[] lines;
-        int last = 0;
-        try{
-            inputStream = this.getResources().openRawResource(R.raw.yonuncafile);
-            text = btoString(inputStream);
-            lines = text.split("\n");
-
-            for (int i = 0; i < lines.length; i++){
-                last = i;
-                System.out.println("iniciando carga" + i);
-                String linea[] = lines[i].split(";");
-                lista.put(i,linea[1]);
-            }
-            System.err.println("carga completa");
-        }catch (IOException e){
-            System.err.println("last " + last);
-        } finally{
-            try{
-                inputStream.close();
-            }catch(IOException e){
-               System.err.println("Error al cerrar");
-            }
-        }
+        DAOContent dao = DAO_Factory.getInstance();
+        lista = dao.getAllYoNunca(this.getResources());
     }
 
     public String btoString( InputStream inputStream ) throws IOException
