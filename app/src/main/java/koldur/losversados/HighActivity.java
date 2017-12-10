@@ -15,6 +15,9 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Random;
 
+import koldur.losversados.dao.DAOContent;
+import koldur.losversados.dao.DAO_Factory;
+
 public class HighActivity extends AppCompatActivity {
     private HashMap<Integer,String> listaRet = new HashMap<Integer,String>();
     private HashMap<Integer,String> listaVer = new HashMap<Integer,String>();
@@ -24,8 +27,8 @@ public class HighActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-        leerArchivoRetHigh(listaRet);
-        leerArchivoVerdHigh(listaVer);
+        leerArchivoRetHigh();
+        leerArchivoVerdHigh();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high);
 
@@ -65,71 +68,18 @@ public class HighActivity extends AppCompatActivity {
         });
     }
 
-    private void leerArchivoRetHigh(HashMap lista){
+    private void leerArchivoRetHigh(){
 
-        InputStream inputStream = null;
-        String text;
-        String[] lines;
         SharedPreferences sh = getSharedPreferences(getString(R.string.DA_COnfiguration_file), Context.MODE_PRIVATE);
         Boolean ext = sh.getBoolean("rhighexpl",false);
-        try{
-            inputStream = this.getResources().openRawResource(R.raw.rethighfile);
-            text = btoString(inputStream);
-            lines = text.split("\n");
-            int counter = 0;
-            for (int i = 0; i < lines.length; i++){
-                String linea[] = lines[i].split(";");
-                if (linea[1].equals("Reto")) {
-                    lista.put(counter, linea[2]);
-                    counter++;
-                }
-                else if(ext && (linea[1].equals("EXPL"))) {
-                    lista.put(counter, linea[2]);
-                    counter++;
-                }
-            }
-        }catch (IOException e){
-            // FALTA POR DECLARAR QUÉ PASA SI NO SE PUEDE LEER
-        } finally{
-            try{
-                inputStream.close();
-            }catch(IOException e){
-                // FALTA POR DECLARAR QUÉ PASA SI NO SE PUEDE LEER
-            }
-        }
-    }
-    private void leerArchivoVerdHigh(HashMap lista){
 
-        InputStream inputStream = null;
-        String text;
-        String[] lines;
-        try{
-            inputStream = this.getResources().openRawResource(R.raw.verdhighfile);
-            text = btoString(inputStream);
-            lines = text.split("\n");
-            for (int i = 0; i < lines.length; i++){
-                String linea[] = lines[i].split(";");
-                lista.put(i,linea[2]);
-            }
-        }catch (IOException e){
-            // FALTA POR DECLARAR QUÉ PASA SI NO SE PUEDE LEER
-        } finally{
-            try{
-                inputStream.close();
-            }catch(IOException e){
-                // FALTA POR DECLARAR QUÉ PASA SI NO SE PUEDE LEER
-            }
-        }
+        DAOContent dao = DAO_Factory.getInstance();
+        listaRet = dao.getHighDare(this.getResources(), ext);
+
     }
-    public String btoString( InputStream inputStream ) throws IOException
-    {
-        ByteArrayOutputStream b = new ByteArrayOutputStream();
-        byte[] bytes = new byte[4096];
-        int len = 0;
-        while ( (len=inputStream.read(bytes))>0 )
-        {
-            b.write(bytes,0,len);
-        }
-        return new String( b.toByteArray(),"UTF8");
+    private void leerArchivoVerdHigh(){
+        DAOContent dao = DAO_Factory.getInstance();
+        listaVer = dao.getHighTruth(this.getResources());
     }
+
 }

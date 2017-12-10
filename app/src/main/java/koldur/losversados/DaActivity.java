@@ -93,6 +93,7 @@ public class DaActivity extends AppCompatActivity {
         String text;
         String[] lines;
         SharedPreferences sh = getSharedPreferences(getString(R.string.DA_COnfiguration_file), Context.MODE_PRIVATE);
+        Boolean ext = sh.getBoolean("rhighexpl",false);
         try{
             int lastId = 0;
             if(sh.getBoolean("rhigh",false)) {
@@ -100,11 +101,19 @@ public class DaActivity extends AppCompatActivity {
                 text = btoString(inputStream);
                 lines = text.split("\n");
 
-                for (int i = 0; i < lines.length; i++) {
+                int counter = 0;
+                for (int i = 0; i < lines.length; i++){
                     String linea[] = lines[i].split(";");
-                    lista.put(i, linea[2]);
+                    if (linea[1].equals("Reto")) {
+                        lista.put(counter, linea[2]);
+                        counter++;
+                    }
+                    else if(ext && (linea[1].equals("EXPL"))) {
+                        lista.put(counter, linea[2]);
+                        counter++;
+                    }
                 }
-                lastId += lines.length;
+                lastId = counter;
             }
             if(sh.getBoolean("rmed",false)) {
                 inputStream = this.getResources().openRawResource(R.raw.retmedfile);

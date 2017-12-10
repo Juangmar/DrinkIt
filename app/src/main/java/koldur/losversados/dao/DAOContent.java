@@ -12,7 +12,12 @@ public abstract class DAOContent {
 
     public abstract HashMap<Integer,String> getAllYoNunca(Resources androidResources);
 
-    public abstract void addAllYoNunca(Resources androidResources, HashMap<Integer,String> list, Integer length);
+    public abstract HashMap<Integer,String> getHighDare(Resources androidResources, Boolean getExplicit);
 
+    public abstract void addHighDare(Resources resources, HashMap<Integer,String> list, Integer length, Boolean getExplicit);
+
+    public abstract HashMap<Integer,String> getHighTruth(Resources androidResources);
+
+    public abstract void addHighTruth(Resources androidResources, HashMap<Integer,String> list, Integer length);
 
 }
